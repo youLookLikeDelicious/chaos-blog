@@ -1,0 +1,3 @@
+ul:has(input[type="checkbox"]) {
+    list-style: none;
+}
