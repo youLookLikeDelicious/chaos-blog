@@ -7,12 +7,11 @@ tags: ["markdown"]
 series: [""]
 ShowToc: true
 weight: 1
-cover:
-  image: images/papermod-cover.png
-  hiddenInList: true
 TocOpen: true
 weight: 2
+aliases: ["/jeoqdixhroxjkcxo0wycyvavndh"]
 ---
+
 aaaaa
 ![image](images/Q7UQbr3Owoiz7dxeQStcmS9Cnif)
 |     |    |    |    |    |    |    |
