@@ -1,3 +1,15 @@
+---
+author: "你好像很好吃"
+title: "理解React useDeferredValue, 提高应用的性能"
+date: "2025-11-6"
+description: "在 React 中，useDeferredValue是 React 18 引入的并发特性 API，核心作用是**为状态创建一个 “延迟版本”**，让一部分UI在优先级更高的UI更新完成之后执行，从而保证 UI 的响应性。其原理可以从以下几个角度理解："
+tags: ["react"]
+series: ["react"]
+ShowToc: true
+weight: 1
+TocOpen: true
+weight: 1
+---
 useDeferredValue(value, initialValue?) 
 在 React 中，useDeferredValue是 React 18 引入的并发特性 API，核心作用是**为状态创建一个 “延迟版本”**，让一部分UI在优先级更高的UI更新完成之后执行，从而保证 UI 的响应性。其原理可以从以下几个角度理解：
 
