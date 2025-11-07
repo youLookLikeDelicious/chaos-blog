@@ -50,6 +50,9 @@ markup:
     - title: true
     - inline: true
   goldmark:
+    renderer:
+      hardWraps: true
+      unsafe: true
     extensions:
       passthrough:
         delimiters:
