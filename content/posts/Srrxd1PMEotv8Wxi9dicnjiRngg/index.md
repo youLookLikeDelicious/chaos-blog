@@ -8,7 +8,6 @@ series: ["react"]
 ShowToc: true
 weight: 1
 TocOpen: true
-weight: 1
 ---
 ## 什么是useDeferredValue
 useDeferredValue(value, initialValue?) 

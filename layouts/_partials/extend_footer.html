@@ -1,0 +1,4 @@
+{{- if (and (eq .Kind "page") ) }}
+{{ $typescript := resources.Get "ts/medium-zoom.ts" | js.Build (dict "target" "ES2020") }}
+<script src='{{ $typescript.RelPermalink }}'></script>
+{{- end }}

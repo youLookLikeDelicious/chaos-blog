@@ -68,3 +68,17 @@ markup:
       taskList: true
 params:
   math: true
+  ShowCodeCopyButtons: true
+
+security:
+  exec:
+    allow:
+    - ^(dart-)?sass(-embedded)?$
+    - ^go$
+    - ^npx$
+    - ^postcss$
+    - ^babel$
+  enableInlineShortcodes: true
+
+build:
+  noJSConfigInAssets: true
