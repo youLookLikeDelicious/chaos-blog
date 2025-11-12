@@ -2,3 +2,8 @@
 {{ $typescript := resources.Get "ts/medium-zoom.ts" | js.Build (dict "target" "ES2020") }}
 <script src='{{ $typescript.RelPermalink }}'></script>
 {{- end }}
+
+{{ $themeToggle := resources.Get "ts/theme-toggle.ts" | js.Build }}
+{{- if (not site.Params.disableThemeToggle) }}
+<script src='{{ $themeToggle.RelPermalink }}'></script>
+{{- end }}

@@ -24,24 +24,24 @@ languages:
           url: tags/
           weight: 10
 
-  en:
-    languageName: ":english:"
-    weight: 2
-    taxonomies:
-      category: FRcategories
-      tag: FRtags
-      series: FRseries
-    menu:
-      main:
-        - name: Archive
-          url: archives/
-          weight: 5
-        - name: Tags
-          url: entags
-          weight: 10
-        - name: Categories
-          url: encategories
-          weight: 10
+  # en:
+  #   languageName: ":english:"
+  #   weight: 2
+  #   taxonomies:
+  #     category: FRcategories
+  #     tag: FRtags
+  #     series: FRseries
+  #   menu:
+  #     main:
+  #       - name: Archive
+  #         url: archives/
+  #         weight: 5
+  #       - name: Tags
+  #         url: entags
+  #         weight: 10
+  #       - name: Categories
+  #         url: encategories
+  #         weight: 10
 
 markup:
   attributes:
