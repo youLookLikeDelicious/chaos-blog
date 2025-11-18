@@ -1,0 +1,44 @@
+{{- $u := urls.Parse .Destination -}}
+{{- $src := $u.String -}}
+{{- if not $u.IsAbs -}}
+  {{- $path := strings.TrimPrefix "./" $u.Path }}
+  {{- with or (.PageInner.Resources.Get $path) (resources.Get $path) -}}
+    {{- $src = .RelPermalink -}}
+    {{- with $u.RawQuery -}}
+      {{- $src = printf "%s?%s" $src . -}}
+    {{- end -}}
+    {{- with $u.Fragment -}}
+      {{- $src = printf "%s#%s" $src . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $attributes := merge .Attributes (dict "alt" .Text "src" $src "title" (.Title | transform.HTMLEscape) "loading" "lazy") -}}
+{{/* 提取 size 参数 */}}
+{{- $size := $u.Query.Get "size" -}}
+{{- if $size -}}
+  {{- $dims := split $size "," -}}
+  {{ if eq (len $dims) 1 -}}
+    {{- $dim := index $dims 0 -}}
+    {{- if ne $dim "" -}}
+      {{- $attributes = merge $attributes (dict "width" $dim) -}}
+    {{- end -}}
+  {{- else if eq (len $dims) 2 -}}
+    {{- $width := index $dims 0 -}}
+    {{- $height := index $dims 1 -}}
+    {{- if ne $width "" -}}
+      {{- $attributes = merge $attributes (dict "width" $width) -}}
+    {{- end -}}
+    {{- if ne $height "" -}}
+      {{- $attributes = merge $attributes (dict "height" $height) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* 渲染 img 标签 */ -}}
+<img
+  {{- range $k, $v := $attributes -}}
+    {{- if $v -}}
+      {{- printf " %s=%q" $k $v | safeHTMLAttr -}}
+    {{- end -}}
+  {{- end -}} data-id="asdf">
+{{- /**/ -}}
