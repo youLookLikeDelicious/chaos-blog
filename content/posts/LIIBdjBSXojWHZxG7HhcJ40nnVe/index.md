@@ -15,46 +15,46 @@ TocOpen: true
 简单说：方向向量只 “管方向”，不管 “长短”，且不能是零向量（零向量无确定方向）。
 # 关键性质
 1. **非零性（必备条件）**：方向向量必须是非零向量（即分量不能全为 0），零向量无法定义方向，因此不能作为方向向量。
-2. **方向不变性（数乘特性）**：若向量$\vec{v}$是某方向的方向向量，那么对任意非零常数$k$，$k\vec{v}$也是该方向的方向向量。$k>0$时方向相同，$k<0$时方向相反（仍对应同一直线的双向方向）。
-3. **直线的方向向量不唯一**：同一条直线的方向向量有无数个，所有方向向量都互相平行（成非零常数倍关系）。例如直线的一个方向向量是$(1, 2)$，则$(2, 4)$、$(-3, -6)$等都是它的方向向量。
+2. **方向不变性（数乘特性）**：若向量$$\vec{v}$$是某方向的方向向量，那么对任意非零常数$$k$$，$$k\vec{v}$$也是该方向的方向向量。$$k>0$$时方向相同，$$k<0$$时方向相反（仍对应同一直线的双向方向）。
+3. **直线的方向向量不唯一**：同一条直线的方向向量有无数个，所有方向向量都互相平行（成非零常数倍关系）。例如直线的一个方向向量是$$(1, 2)$$，则$$(2, 4)$$、$$(-3, -6)$$等都是它的方向向量。
 4. **可单位化**：任意非零方向向量都能通过 “除以自身模长” 转化为单位方向向量（模长 = 1），单位方向向量仍保留原方向，仅长度标准化，方便计算。
-5. **平行判定依据**：两个方向向量$\vec{v1}$和$\vec{v2}$平行（即对应直线平行）的充要条件是：存在非零常数$k$，使得$\vec{v1} = k\vec{v2}$。
+5. **平行判定依据**：两个方向向量$$\vec{v1}$$和$$\vec{v2}$$平行（即对应直线平行）的充要条件是：存在非零常数$$k$$，使得$$\vec{v1} = k\vec{v2}$$。
 6. 相等的向量方向和长度都相同
 
 # 向量的运算
 ## 向量加减法则
-![image](images/YukzbWIMGoZh8hxOJ6wcY8KlnCg)
+![](images/YukzbWIMGoZh8hxOJ6wcY8KlnCg?size=364,364)
 ## 向量减法
-$\vec{OA} - \vec{OB}$, 可以以等价理解为$\vec{OA} + (-\vec{OB})$,
+$$\vec{OA} - \vec{OB}$$, 可以以等价理解为$$\vec{OA} + (-\vec{OB})$$,
 ### 代数规则
-对应分量相减：$\vec{a} - \vec{b} = (a_1 - b_1, a_2 - b_2)$
+对应分量相减：$$\vec{a} - \vec{b} = (a_1 - b_1, a_2 - b_2)$$
 
 
-![image](images/XRqpbWROtocIK9xF0TGc2eUMntX)
+![](images/XRqpbWROtocIK9xF0TGc2eUMntX?size=800,418)
 
 ### 关键规律
-- 不满足交换律：$\vec{a} - \vec{b} ≠ -(\vec{b} - \vec{a})$（方向相反，模长相等）
-- 模长关系：$|\vec{a} - \vec{b}|^2 = |\vec{a}|^2 + |\vec{b}|^2 - 2|\vec{a}||\vec{b}|\cos\theta$。 
--  $\theta = 0^\circ（同向）：|\vec{a} - \vec{b}| = ||\vec{a}| - |\vec{b}||$（模长最小）。
--  $\theta = 180^\circ（反向）：|\vec{a} - \vec{b}| = |\vec{a}| + |\vec{b}|$（模长最大）。  
--  $\theta = 90^\circ（垂直）：|\vec{a} - \vec{b}| = \sqrt{|\vec{a}|^2 + |\vec{b}|^2}$（与和向量模长相等）。
+- 不满足交换律：$$\vec{a} - \vec{b} ≠ -(\vec{b} - \vec{a})$$（方向相反，模长相等）
+- 模长关系：$$|\vec{a} - \vec{b}|^2 = |\vec{a}|^2 + |\vec{b}|^2 - 2|\vec{a}||\vec{b}|\cos\theta$$。 
+-  $$\theta = 0^\circ（同向）：|\vec{a} - \vec{b}| = ||\vec{a}| - |\vec{b}||$$（模长最小）。
+-  $$\theta = 180^\circ（反向）：|\vec{a} - \vec{b}| = |\vec{a}| + |\vec{b}|$$（模长最大）。  
+-  $$\theta = 90^\circ（垂直）：|\vec{a} - \vec{b}| = \sqrt{|\vec{a}|^2 + |\vec{b}|^2}$$（与和向量模长相等）。
 公式各部分含义
-$|\vec{a} - \vec{b}|^2$:  向量 $\vec{a} 与 \vec{b}$ 之差的**模长的平方**（即和向量的“长度的平方”）
-$|\vec{a}|^2$：向量 $\vec{a}$的**模长的平方**（自身长度的平方）
-$\theta$ ：向量$\vec{a}$和$\vec{b}$之间的**夹角**（共起点时，两向量之间的角，范围 $0 \leq \theta \leq \pi$）
-推导过程（从向量点积展开） 根据向量模长与点积的关系：对任意向量 $\vec{v}$，有 $|\vec{v}|^2$ = $\vec{v} \cdot \vec{v}$（自身点积等于模长的平方）。 因此，对和向量 $\vec{a} + \vec{b}$，其模长的平方可展开为：
-$|\vec{a} - \vec{b}|^2 = (\vec{a} - \vec{b}) \cdot (\vec{a} - \vec{b}) \\ = \vec{a} \cdot \vec{a} - \vec{a} \cdot \vec{b} - \vec{b} \cdot \vec{a} + \vec{b} \cdot \vec{b} \\ = |\vec{a}|^2 + |\vec{b}|^2 - 2\vec{a} \cdot \vec{b} \quad (\text{点积交换律：}\vec{a} \cdot \vec{b} = \vec{b} \cdot \vec{a}) \\ = |\vec{a}|^2 + |\vec{b}|^2 - 2|\vec{a}||\vec{b}|\cos\theta \quad (\text{点积定义：}\vec{a} \cdot \vec{b} = |\vec{a}||\vec{b}|\cos\theta)$
+$$|\vec{a} - \vec{b}|^2$$:  向量 $$\vec{a} 与 \vec{b}$$ 之差的**模长的平方**（即和向量的“长度的平方”）
+$$|\vec{a}|^2$$：向量 $$\vec{a}$$的**模长的平方**（自身长度的平方）
+$$\theta$$ ：向量$$\vec{a}$$和$$\vec{b}$$之间的**夹角**（共起点时，两向量之间的角，范围 $$0 \leq \theta \leq \pi$$）
+推导过程（从向量点积展开） 根据向量模长与点积的关系：对任意向量 $$\vec{v}$$，有 $$|\vec{v}|^2$$ = $$\vec{v} \cdot \vec{v}$$（自身点积等于模长的平方）。 因此，对和向量 $$\vec{a} + \vec{b}$$，其模长的平方可展开为：
+$$|\vec{a} - \vec{b}|^2 = (\vec{a} - \vec{b}) \cdot (\vec{a} - \vec{b}) \\ = \vec{a} \cdot \vec{a} - \vec{a} \cdot \vec{b} - \vec{b} \cdot \vec{a} + \vec{b} \cdot \vec{b} \\ = |\vec{a}|^2 + |\vec{b}|^2 - 2\vec{a} \cdot \vec{b} \quad (\text{点积交换律：}\vec{a} \cdot \vec{b} = \vec{b} \cdot \vec{a}) \\ = |\vec{a}|^2 + |\vec{b}|^2 - 2|\vec{a}||\vec{b}|\cos\theta \quad (\text{点积定义：}\vec{a} \cdot \vec{b} = |\vec{a}||\vec{b}|\cos\theta)$$
 ## 向量的点积
 **向量的点积（Dot Product）** 是线性代数中最基础、也最有用的运算之一，它用来衡量 **两个向量的方向关系**（比如是否平行、垂直、夹角大小等）
-$\vec{a} \cdot \vec{b} = a_x b_x + a_y b_y$
-如果是三维，还要加上$a_z b_z$
+$$\vec{a} \cdot \vec{b} = a_x b_x + a_y b_y$$
+如果是三维，还要加上$$a_z b_z$$
 ### 几何意义
-点积也可以写成$\vec{a} \cdot \vec{b} = |\vec{a}| \cdot |\vec{b}| \cos(\theta)$, 即**一个向量的模长，与另一个向量在它方向上的数量投影的乘积**。
-![image](images/Zp4mbmWGkoMXIixSocicc5ZOnVb)
+点积也可以写成$$\vec{a} \cdot \vec{b} = |\vec{a}| \cdot |\vec{b}| \cos(\theta)$$, 即**一个向量的模长，与另一个向量在它方向上的数量投影的乘积**。
+![](images/Zp4mbmWGkoMXIixSocicc5ZOnVb?size=464,198)
 其中：
-- $|\vec{a}|$ 是向量 a 的长度（模）
-- $|\vec{b}|$ 是向量 b 的长度
-- $\theta$ 是两个向量的夹角
+- $$|\vec{a}|$$ 是向量 a 的长度（模）
+- $$|\vec{b}|$$ 是向量 b 的长度
+- $$\theta$$ 是两个向量的夹角
 ### 应用
 - 可以将向量的点积理解为**两个向量方向的相似程度, **两个单位向量方向和夹角的关系如下
 |     |    |    |
@@ -65,16 +65,16 @@ $\vec{a} \cdot \vec{b} = a_x b_x + a_y b_y$
 |  180°（反方向）  |-1  |点积最小（负数）|
 
 - 计算两个向量之间的夹角
-$\theta = \cos ^{-1} \frac{\vec{a} \cdot \vec{b}}{|\vec{a}| \cdot |\vec{b}|}$
+$$\theta = \cos ^{-1} \frac{\vec{a} \cdot \vec{b}}{|\vec{a}| \cdot |\vec{b}|}$$
  例题: 
 ### 已知条件
-向量 $\vec{a}$=(1, 2, 2)，向量 $\vec{b}$=(2, 1, -2)，求两向量的夹角 θ
-- 计算向量的点积: $\vec{a} \cdot \vec{b} = 1 \times 2 + 2 \times 1 + 2 \times -2 = 0$
-- 计算模长: $|\vec{a}| = \sqrt{1^2 + 2^2 + 2^2} = 3$, $|\vec{b}| = \sqrt{2^2 + 1 ^ 2 + (-2) ^2} = 3$
-- $\cos\theta = \frac{0}{3} = 0$
-- $\theta = \arccos{0} = \frac{\pi}{2} = 90\degree$
+向量 $$\vec{a}$$=(1, 2, 2)，向量 $$\vec{b}$$=(2, 1, -2)，求两向量的夹角 θ
+- 计算向量的点积: $$\vec{a} \cdot \vec{b} = 1 \times 2 + 2 \times 1 + 2 \times -2 = 0$$
+- 计算模长: $$|\vec{a}| = \sqrt{1^2 + 2^2 + 2^2} = 3$$, $$|\vec{b}| = \sqrt{2^2 + 1 ^ 2 + (-2) ^2} = 3$$
+- $$\cos\theta = \frac{0}{3} = 0$$
+- $$\theta = \arccos{0} = \frac{\pi}{2} = 90\degree$$
 - 向量的长度等于自身点积的平方根
-$|\vec{a}| = \sqrt{\vec{a} \cdot \vec{a}}$
+$$|\vec{a}| = \sqrt{\vec{a} \cdot \vec{a}}$$
 ## 投影
 向量的投影本质是: 两个非零向量, 一个向量在另一个向量方向上的 “影子”，它衡量的是一个向量在另一个向量方向上有多少成分.投影分为**向量投影**（有方向）和**数量投影**（无方向，仅数值）
 ### 几何意义
@@ -83,91 +83,91 @@ $|\vec{a}| = \sqrt{\vec{a} \cdot \vec{a}}$
 - 得到一个 **沿着 b 方向的向量**
 可以理解成：
  👉 “a 在方向 b 上的影子”。
-![image](images/L2cFbNHkyohLqBx3CP5cc1mBnIh)
+![](images/L2cFbNHkyohLqBx3CP5cc1mBnIh?size=450,300)
 ### 数学表达
 #### 向量投影（向量形式）
-$\text{proj}_{\mathbf{\vec{b}}}(\mathbf{\vec{a}}) = \frac{\vec{a} \cdot \vec{b}}{\vec{b} \cdot \vec{b}} \cdot \vec{b}$
-它是一个向量（方向与 $\vec{b}$ 相同）。
+$$\text{proj}_{\mathbf{\vec{b}}}(\mathbf{\vec{a}}) = \frac{\vec{a} \cdot \vec{b}}{\vec{b} \cdot \vec{b}} \cdot \vec{b}$$
+它是一个向量（方向与 $$\vec{b}$$ 相同）。
 #### 标量投影（长度）
-$\text{comp}_{\vec{b}}(\vec{a})
- = \frac{\vec{a} \cdot \vec{b}}{|\vec{b}|}$
+$$\text{comp}_{\vec{b}}(\vec{a})
+ = \frac{\vec{a} \cdot \vec{b}}{|\vec{b}|}$$
 #### 从点积视角理解
-$\vec{a} \cdot \vec{b} = |\vec{a}|, |\vec{b}| \cos\theta$
+$$\vec{a} \cdot \vec{b} = |\vec{a}|, |\vec{b}| \cos\theta$$
 于是投影：
-$\text{proj}_{\vec{b}}(\vec{a})| = |\vec{a}| \cos\theta$
-也就是 $\vec{a}$在$\vec{b}$方向的分量大小。
+$$\text{proj}_{\vec{b}}(\vec{a})| = |\vec{a}| \cos\theta$$
+也就是 $$\vec{a}$$在$$\vec{b}$$方向的分量大小。
 #### 简单示例
-假设$\vec{a} = (3, 4))$，$\vec{b} = (4, 0))$
-$\text{proj}_{\vec{b}}(\vec{a})
+假设$$\vec{a} = (3, 4))$$，$$\vec{b} = (4, 0))$$
+$$\text{proj}_{\vec{b}}(\vec{a})
  = \frac{(3,4)\cdot(4,0)}{(4,0)\cdot(4,0)} (4,0)
  = \frac{12}{16} (4,0)
- = (3,0)$
-$\vec{a}$**在 **$\vec{b}$** 方向的投影是 (3,0)**
+ = (3,0)$$
+$$\vec{a}$$**在 **$$\vec{b}$$** 方向的投影是 (3,0)**
 
 ## 向量单位化
 将向量单位化，是指将一个**非零向量**转化为与其**方向相同、模长（长度）为**1的单位向量（也叫“标准化向量”）。单位化后的向量仅保留原向量的方向信息，长度被“归一化”为1，在方向分析、物理建模等场景中非常实用。
 一、单位化的前提
 只有**非零向量**才能单位化（零向量模长为0，除以0无意义，且零向量没有确定方向）。
 二、单位化的步骤
-设非零向量为 $\vec{a}$，单位化后的向量记为 $\hat{a}$，步骤如下：
+设非零向量为 $$\vec{a}$$，单位化后的向量记为 $$\hat{a}$$，步骤如下：
 #### 1. 计算原向量的模长（长度）
 向量的模长是其各分量平方和的算术平方根：  
-- 若 $\vec{a}$ 是二维向量：$\vec{a} = (a_1, a_2)$，模长 $|\vec{a}| = \sqrt{a_1^2 + a_2^2}$  
-- 若 $\vec{a}$ 是三维向量：$\vec{a} = (a_1, a_2, a_3)$，模长 $|\vec{a}| = \sqrt{a_1^2 + a_2^2 + a_3^2}$  
-- 推广到 $n$ 维向量：$\vec{a} = (a_1, a_2, ..., a_n)$，模长 $|\vec{a}| = \sqrt{\sum_{i=1}^n a_i^2}$  
+- 若 $$\vec{a}$$ 是二维向量：$$\vec{a} = (a_1, a_2)$$，模长 $$|\vec{a}| = \sqrt{a_1^2 + a_2^2}$$  
+- 若 $$\vec{a}$$ 是三维向量：$$\vec{a} = (a_1, a_2, a_3)$$，模长 $$|\vec{a}| = \sqrt{a_1^2 + a_2^2 + a_3^2}$$  
+- 推广到 $$n$$ 维向量：$$\vec{a} = (a_1, a_2, ..., a_n)$$，模长 $$|\vec{a}| = \sqrt{\sum_{i=1}^n a_i^2}$$  
 #### 2. 用原向量除以它的模长
-单位向量 $\hat{a}$ 的每个分量等于原向量对应分量除以模长：  
-$\hat{a} = \frac{\vec{a}}{|\vec{a}|} = \left( \frac{a_1}{|\vec{a}|}, \frac{a_2}{|\vec{a}|}, ..., \frac{a_n}{|\vec{a}|} \right)$
+单位向量 $$\hat{a}$$ 的每个分量等于原向量对应分量除以模长：  
+$$\hat{a} = \frac{\vec{a}}{|\vec{a}|} = \left( \frac{a_1}{|\vec{a}|}, \frac{a_2}{|\vec{a}|}, ..., \frac{a_n}{|\vec{a}|} \right)$$
 示例
 #### 例1：二维向量单位化
-已知向量$\vec{v} = (3, 4)$，求其单位向量 $\hat{v}$。  
-- 步骤1：计算模长 $|\vec{v}| = \sqrt{3^2 + 4^2} = 5$
-- 步骤2：单位化 $\hat{v} = \frac{\vec{v}}{5} = \left( \frac{3}{5}, \frac{4}{5} \right)$
-- 验证：$\hat{v}$ 的模长为 $\sqrt{(\frac{3}{5})^2 + (\frac{4}{5})^2} = \sqrt{\frac{9}{25} + \frac{16}{25}} = \sqrt{\frac{25}{25}} = 1$，符合单位向量定义。
+已知向量$$\vec{v} = (3, 4)$$，求其单位向量 $$\hat{v}$$。  
+- 步骤1：计算模长 $$|\vec{v}| = \sqrt{3^2 + 4^2} = 5$$
+- 步骤2：单位化 $$\hat{v} = \frac{\vec{v}}{5} = \left( \frac{3}{5}, \frac{4}{5} \right)$$
+- 验证：$$\hat{v}$$ 的模长为 $$\sqrt{(\frac{3}{5})^2 + (\frac{4}{5})^2} = \sqrt{\frac{9}{25} + \frac{16}{25}} = \sqrt{\frac{25}{25}} = 1$$，符合单位向量定义。
 #### 例2：三维向量单位化
-已知向量$\vec{w} = (1, 2, 2)$ ，求其单位向量 $\hat{v}$。  
-- 模长 $|\vec{w}| = \sqrt{1^2 + 2^2 + 2^2} = 3$  
-- 单位化 $\hat{w} = \left( \frac{1}{3}, \frac{2}{3}, \frac{2}{3} \right)$  
+已知向量$$\vec{w} = (1, 2, 2)$$ ，求其单位向量 $$\hat{v}$$。  
+- 模长 $$|\vec{w}| = \sqrt{1^2 + 2^2 + 2^2} = 3$$  
+- 单位化 $$\hat{w} = \left( \frac{1}{3}, \frac{2}{3}, \frac{2}{3} \right)$$  
 ## 叉乘
 向量的叉乘（又称向量积、外积）是**三维向量**特有的运算, 其结果是一个新的向量.
 ### 核心定义
-对于三维空间中的两个向量 $\vec{a} = (a_1, a_2, a_3)$ 和 $\vec{b} = (b_1, b_2, b_3)$，它们的叉乘记为 $\vec{a} \times \vec{b}$（读作 “a 叉 b”），结果是一个**垂直于 **$\vec{a}$** 和 **$\vec{b}$** 所构成平面**的向量，其方向由「右手定则」判断，大小等于以 $\vec{a}$ $\vec{b}$  为邻边的平行四边形的面积。
-![image](images/IU5ubTyiLoIEW3xUUfocfxdGnsh)
+对于三维空间中的两个向量 $$\vec{a} = (a_1, a_2, a_3)$$ 和 $$\vec{b} = (b_1, b_2, b_3)$$，它们的叉乘记为 $$\vec{a} \times \vec{b}$$（读作 “a 叉 b”），结果是一个**垂直于 **$$\vec{a}$$** 和 **$$\vec{b}$$** 所构成平面**的向量，其方向由「右手定则」判断，大小等于以 $$\vec{a}$$ $$\vec{b}$$  为邻边的平行四边形的面积。
+![向量叉乘右手定则](images/IU5ubTyiLoIEW3xUUfocfxdGnsh?size=160,144)
 ### 计算公式
 #### 分量展开式(最直观)
-设：$\vec{a} = (a_x, a_y, a_z),  \vec{b} = (b_x, b_y, b_z)$
-叉乘：$\vec{a} \times \vec{b} =
+设：$$\vec{a} = (a_x, a_y, a_z),  \vec{b} = (b_x, b_y, b_z)$$
+叉乘：$$\vec{a} \times \vec{b} =
  \left(
  a_y b_z - a_z b_y,\
  a_z b_x - a_x b_z,\
  a_x b_y - a_y b_x
- \right)$
+ \right)$$
 #### 从几何的角度计算
-$|\vec{a} \times \vec{b}| = |\vec{a}|\cdot|\vec{b}| \cdot \sin\theta$ θ是$\vec{a}$和 $\vec{b}$的夹角
+$$|\vec{a} \times \vec{b}| = |\vec{a}|\cdot|\vec{b}| \cdot \sin\theta$$ θ是$$\vec{a}$$和 $$\vec{b}$$的夹角
 #### 行列式
-$\vec{a} \times \vec{b} = \begin{vmatrix} 
+$$\vec{a} \times \vec{b} = \begin{vmatrix} 
 i & j & k \\
 a_x & a_y & a_z \\
 b_x & b_y & b_z
-\end{vmatrix}$
+\end{vmatrix}$$
 三维空间中，单位向量 i=(1,0,0)、j=(0,1,0)、k=(0,0,1) 分别对应 x、y、z 轴方向，它们构成了空间**基向量**。对第一行做余子式展开, 正好和分量展开式一样
-$i = \begin{vmatrix}
+$$i = \begin{vmatrix}
 a_y & a_z \\
 b_y & b_z
-\end{vmatrix} = a_y b_z - a_z b_y$
-$j = \begin{vmatrix}
+\end{vmatrix} = a_y b_z - a_z b_y$$
+$$j = \begin{vmatrix}
  a_x & a_z \\
  b_x & b_z
  \end{vmatrix}
  = - (a_x b_z - a_z b_x)
- = a_z b_x - a_x b_z$
-$ k = \begin{vmatrix}
+ = a_z b_x - a_x b_z$$
+$$ k = \begin{vmatrix}
  a_x & a_y \\
  b_x & b_y
  \end{vmatrix}
- = a_x b_y - a_y b_x$
+ = a_x b_y - a_y b_x$$
 #### 矩阵形式
-$\vec{a} \times \vec{b} = \begin{pmatrix} 
+$$\vec{a} \times \vec{b} = \begin{pmatrix} 
 0 & -a_z & a_y \\
 a_z & 0 & -a_x \\
 -a_y & a_x & 0
@@ -175,8 +175,8 @@ a_z & 0 & -a_x \\
 b_x \\
 b_y \\
 b_z
-\end{pmatrix}$
+\end{pmatrix}$$
 ### 几何意义
-如果以向量 $\vec{a}$ 和 $\vec{b}$为边构成一个平行四边形，那么这两个向量外积的模长与这个平行四边形的面积相等。
-![image](images/X0BjbFLNJowp5XxStIzc56hbnKc)
+如果以向量 $$\vec{a}$$ 和 $$\vec{b}$$为边构成一个平行四边形，那么这两个向量外积的模长与这个平行四边形的面积相等。
+![](images/X0BjbFLNJowp5XxStIzc56hbnKc?size=248,252)
 
