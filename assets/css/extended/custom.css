@@ -8,6 +8,9 @@ body {
 .post-content code {
     font-size: .83em;
 }
+.post-content img {
+    object-fit: contain;
+}
 
 ::view-transition-image-pair(root) {
     isolation: auto;
@@ -18,4 +21,11 @@ body {
     animation: none;
     mix-blend-mode: normal;
     display: block;
+}
+
+.katex-display {
+    display: inline-block;
+}
+.katex-display>.katex {
+    text-align: left;
 }

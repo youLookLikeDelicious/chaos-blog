@@ -1,0 +1,15 @@
+{{- $js := resources.Get "vendor/js/mathjax@4.js" }}
+<script src="{{ $js.RelPermalink }}" async></script>
+<!-- <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script> -->
+
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['\\[', '\\]'], ['$$', '$$']],  // block
+      inlineMath: [['\\(', '\\)'], ['$', '$']]                  // inline
+    },
+    loader:{
+      load: ['ui/safe']
+    },
+  };
+</script>

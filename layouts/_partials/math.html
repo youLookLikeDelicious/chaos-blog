@@ -1,15 +1,25 @@
-{{- $js := resources.Get "vendor/js/mathjax@4.js" }}
-<script src="{{ $js.RelPermalink }}" async></script>
-<!-- <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script> -->
+{{- $js := resources.Get "vendor/js/katex/katex.min.js" }}
+{{- $authRenderJs := resources.Get "vendor/js/katex/auto-render.js" }}
+{{- $katexCss := resources.Get "vendor/js/katex/katex.min.css" }}
+{{- $katexSwapCss := resources.Get "vendor/js/katex/katex-swap.min.css" }}
+<script src="{{ $js.RelPermalink }}" deffer></script>
+<script src="{{ $authRenderJs.RelPermalink }}" deffer></script>
+<link rel="stylesheet" href="{{ $katexCss.RelPermalink }}">
+<link rel="stylesheet" href="{{ $katexSwapCss.RelPermalink }}">
 
 <script>
-  MathJax = {
-    tex: {
-      displayMath: [['\\[', '\\]'], ['$$', '$$']],  // block
-      inlineMath: [['\\(', '\\)'], ['$', '$']]                  // inline
-    },
-    loader:{
-      load: ['ui/safe']
-    },
-  };
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // customised options
+        // • auto-render specific keys, e.g.:
+        delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: true},
+            {left: '\\(', right: '\\)', display: false},
+            {left: '\\[', right: '\\]', display: true}
+        ],
+        // • rendering keys, e.g.:
+        throwOnError : false
+    });
+});
 </script>

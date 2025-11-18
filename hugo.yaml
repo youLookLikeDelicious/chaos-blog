@@ -51,7 +51,7 @@ markup:
     - inline: true
   goldmark:
     renderer:
-      hardWraps: true
+      hardWraps: true # 启用硬换行
       unsafe: true
     extensions:
       passthrough:
@@ -59,11 +59,11 @@ markup:
           block:
           - - \[
             - \]
-          - - $$
-            - $$
           inline:
           - - \(
             - \)
+          - - $$
+            - $$
         enable: true
       taskList: true
 params:
