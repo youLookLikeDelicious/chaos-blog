@@ -55,6 +55,18 @@ class MyStatelessButton extends StatelessWidget {
 # StatefulWidget
 StatefulWidget 拥有内部可变状态（State 对象），当状态变化时（通过 setState()），UI 会自动重新构建。
 ## 生命周期
+|     |    |    |
+| ---- |---- |---- |
+|生命周期方法|调用次数|描述|
+|  StatefulWidget 构造函数  |多次  |创建不可变的Widget配置。|
+|  State.createState  |1次  |StatefulWidget 的方法，用于创建对应的 State 对象。|
+|  State.initState  |1次  |插入Widget树时立即调用。只调用一次，用于初始化依赖于BuildContext的数据或订阅流（Stream）。|
+|  State.didChangeDependencies  |多次  |在 initState 后立即调用一次；后续当依赖的InheritedWidget（如Provider、Theme）发生变化时也会触发。|
+|  State.build  |多次  |必须实现。每当状态改变（setState）或依赖变化时都会调用，用于构建UI。|
+|  State.didUpdateWidget  |多次  |当父组件重建并传入一个新的 Widget 配置时调用。简单说父组件传递给子组件的参数（widget 的属性）变化时，新旧 widget 通过 == 比较为 “不相等”，此时会触发该方法。|
+|  State.setState  |多次  |这不是生命周期方法，而是关键方法。你调用它来通知框架状态已改变，需要重新构建。|
+|  State.deactivate  |多次  |当 State 对象从树中暂时移除时调用（比如页面路由切换）。|
+|  State.dispose  |1次  |当 State 对象被永久从树中移除时调用。必须在这里释放所有资源，如取消计时器、关闭流等，防止内存泄漏。|
 
 ## didUpdateWidget Example
 ```TypeScript
